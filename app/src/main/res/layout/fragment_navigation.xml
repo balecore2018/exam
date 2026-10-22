@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Пояснение: Горизонтальная нижняя панель меню отдельного фрагмента. -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +9,7 @@
     android:background="#FFFFFFFF"
     android:elevation="8dp">
 
-    <!-- Пояснение: Активный пункт меню, который соответствует открытой странице вакансий. -->
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -17,7 +17,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <!-- Пояснение: Значок активного пункта меню. -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
             android:textColor="#FF004CD2"
             android:textSize="18sp" />
 
-        <!-- Пояснение: Подпись активного пункта меню. -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             android:textSize="9sp" />
     </LinearLayout>
 
-    <!-- Пояснение: Неактивный пункт кандидатов из макета задания. -->
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -42,7 +42,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <!-- Пояснение: Значок пункта кандидатов. -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             android:textColor="#FF8994A9"
             android:textSize="18sp" />
 
-        <!-- Пояснение: Подпись пункта кандидатов. -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             android:textSize="9sp" />
     </LinearLayout>
 
-    <!-- Пояснение: Неактивный пункт профиля из макета задания. -->
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -67,7 +67,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <!-- Пояснение: Значок пункта профиля. -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             android:textColor="#FF8994A9"
             android:textSize="18sp" />
 
-        <!-- Пояснение: Подпись пункта профиля. -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

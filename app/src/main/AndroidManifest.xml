@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"> <!-- Пояснение: Описываем разрешения и главные компоненты Android-приложения. -->
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- Пояснение: Разрешаем приложению обращаться к тестовому API. -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Пояснение: Разрешаем проверять состояние сетевого подключения. -->
-    <application android:allowBackup="true" android:label="@string/app_name" android:theme="@style/AppTheme" android:usesCleartextTraffic="true"> <!-- Пояснение: Задаём имя, тему и разрешаем локальный HTTP-сервер без TLS. -->
-        <activity android:name="ru.hrconnect.app.presentations.list.MainActivity" android:exported="true"> <!-- Пояснение: Объявляем главный экран списка вакансий. -->
-            <intent-filter> <!-- Пояснение: Объявляем фильтр запуска приложения из меню Android. -->
-                <action android:name="android.intent.action.MAIN" /> <!-- Пояснение: Указываем, что Activity является точкой входа. -->
-                <category android:name="android.intent.category.LAUNCHER" /> <!-- Пояснение: Добавляем приложение в список запускаемых программ. -->
-            </intent-filter> <!-- Пояснение: Завершаем фильтр запуска главного экрана. -->
-        </activity> <!-- Пояснение: Завершаем объявление Activity приложения. -->
-    </application> <!-- Пояснение: Завершаем описание приложения. -->
-</manifest> <!-- Пояснение: Завершаем AndroidManifest. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application android:allowBackup="true" android:label="@string/app_name" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <activity android:name="ru.hrconnect.app.presentations.list.MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
 
