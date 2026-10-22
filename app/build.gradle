@@ -1,28 +1,28 @@
-plugins { id 'com.android.application' } // Пояснение: Подключаем плагин сборки Android-приложения.
+plugins { id 'com.android.application' }
 
-android { // Пояснение: Начинаем настройки Android-модуля приложения.
-    namespace 'ru.hrconnect.app' // Пояснение: Задаём пакет ресурсов и сгенерированного класса R.
-    compileSdk 36 // Пояснение: Собираем приложение с Android SDK 36.
-    defaultConfig { // Пояснение: Указываем параметры приложения по умолчанию.
-        applicationId 'ru.hrconnect.app' // Пояснение: Задаём уникальный идентификатор установки.
-        minSdk 23 // Пояснение: Поддерживаем устройства начиная с Android 6.
-        targetSdk 28 // Пояснение: Оставляем совместимый режим сетевых HTTP-запросов для учебного API.
-        versionCode 1 // Пояснение: Задаём внутренний номер первой версии приложения.
-        versionName '1.0' // Пояснение: Задаём отображаемую версию приложения.
-        buildConfigField 'String', 'API_BASE_URL', '"http://10.0.2.2:8080"' // Пояснение: Сохраняем адрес тестового сервера для Android-эмулятора.
-    } // Пояснение: Завершаем базовые настройки приложения.
-    buildFeatures { buildConfig true } // Пояснение: Генерируем BuildConfig с настройками Gradle.
-    compileOptions { // Пояснение: Указываем совместимость компилятора Java.
-        sourceCompatibility JavaVersion.VERSION_17 // Пояснение: Разрешаем синтаксис Java 17 в исходниках.
-        targetCompatibility JavaVersion.VERSION_17 // Пояснение: Создаём байткод для Java 17.
-    } // Пояснение: Завершаем параметры Java-компиляции.
+android {
+    namespace 'ru.hrconnect.app'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'ru.hrconnect.app'
+        minSdk 23
+        targetSdk 28
+        versionCode 1
+        versionName '1.0'
+        buildConfigField 'String', 'API_BASE_URL', '"http://10.0.2.2:8080"'
+    }
+    buildFeatures { buildConfig true }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
 }
 
-dependencies { // Пояснение: Объявляем модули, от которых зависит приложение.
-    implementation project(':network-layer') // Пояснение: Подключаем API и локальное хранилище вакансий.
-    implementation project(':ui-kit') // Пояснение: Подключаем переиспользуемые компоненты интерфейса.
-    implementation libs.androidx.fragment // Пояснение: Подключаем отдельный AndroidX-фрагмент меню.
-} // Пояснение: Завершаем зависимости Android-приложения.
+dependencies {
+    implementation project(':network-layer')
+    implementation project(':ui-kit')
+    implementation libs.androidx.fragment
+}
 
 
 

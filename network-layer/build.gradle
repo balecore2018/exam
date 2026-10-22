@@ -1,11 +1,11 @@
-plugins { id 'com.android.library' } // Пояснение: Собираем сетевой слой как отдельную Android-библиотеку.
+plugins { id 'com.android.library' }
 
-android { // Пояснение: Настраиваем модуль сетевой библиотеки.
-    namespace 'ru.hrconnect.network' // Пояснение: Задаём пространство имён ресурсов библиотеки.
-    compileSdk 36 // Пояснение: Используем Android SDK 36 при сборке.
-    defaultConfig { minSdk 23 } // Пояснение: Поддерживаем те же версии Android, что и приложение.
-    compileOptions { // Пояснение: Настраиваем версию языка Java для библиотеки.
-        sourceCompatibility JavaVersion.VERSION_17 // Пояснение: Компилируем исходники с правилами Java 17.
-        targetCompatibility JavaVersion.VERSION_17 // Пояснение: Создаём совместимый Java 17 байткод.
-    } // Пояснение: Завершаем настройки компилятора.
-} // Пояснение: Завершаем настройки Android-модуля.
+android {
+    namespace 'ru.hrconnect.network'
+    compileSdk 36
+    defaultConfig { minSdk 23 }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
