@@ -1,28 +1,28 @@
-pluginManagement {
-    repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
-        mavenCentral()
-        gradlePluginPortal()
-    }
+pluginManagement { // Пояснение: Настраиваем источники Gradle-плагинов.
+    repositories { // Пояснение: Перечисляем репозитории, из которых Gradle получает плагины.
+        google { // Пояснение: Подключаем официальный репозиторий Android.
+            content { // Пояснение: Ограничиваем группы, загружаемые из Google Maven.
+                includeGroupByRegex("com\\.android.*") // Пояснение: Разрешаем Android Gradle Plugin.
+                includeGroupByRegex("com\\.google.*") // Пояснение: Разрешаем библиотеки Google.
+                includeGroupByRegex("androidx.*") // Пояснение: Разрешаем библиотеки AndroidX.
+            } // Пояснение: Завершаем фильтр групп.
+        } // Пояснение: Завершаем настройку Google Maven.
+        mavenCentral() // Пояснение: Подключаем центральный репозиторий Java-библиотек.
+        gradlePluginPortal() // Пояснение: Подключаем портал плагинов Gradle.
+    } // Пояснение: Завершаем список репозиториев плагинов.
 }
 plugins {
-    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0' // Пояснение: Позволяем Gradle подобрать установленный JDK 21.
 }
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-    }
+dependencyResolutionManagement { // Пояснение: Настраиваем источники библиотек проекта.
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS) // Пояснение: Требуем объявлять репозитории только в этом файле.
+    repositories { // Пояснение: Перечисляем источники библиотек модулей.
+        google() // Пояснение: Подключаем Android и Google библиотеки.
+        mavenCentral() // Пояснение: Подключаем Java-библиотеки.
+    } // Пояснение: Завершаем перечень источников.
 }
 
-rootProject.name = "HRConnectVariant2"
-include ':app', ':network-layer', ':ui-kit'
+rootProject.name = "HRConnectVariant2" // Пояснение: Задаём имя самостоятельного проекта варианта 2.
+include ':app', ':network-layer', ':ui-kit' // Пояснение: Подключаем приложение, сетевой слой и библиотеку графических компонентов.
 
 

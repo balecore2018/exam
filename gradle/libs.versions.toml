@@ -1,8 +1,8 @@
-[versions]
+[versions] # Пояснение: Храним используемые версии Gradle-плагинов.
 agp = "9.0.1"
 fragment = "1.9.1"
 [libraries]
-androidx-fragment = { group = "androidx.fragment", name = "fragment", version.ref = "fragment" }
+androidx-fragment = { group = "androidx.fragment", name = "fragment", version.ref = "fragment" } # Пояснение: Задаём версию Android Gradle Plugin.
 
-[plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
+[plugins] # Пояснение: Объявляем плагины Gradle для проекта.
+android-application = { id = "com.android.application", version.ref = "agp" } # Пояснение: Привязываем Android-плагин к версии из секции versions.
