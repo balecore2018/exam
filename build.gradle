@@ -1,0 +1,4 @@
+plugins {
+    alias(libs.plugins.android.application) apply false // Пояснение: Подготавливаем версию Android-плагина для модуля app.
+    id 'com.android.library' version '9.0.1' apply false // Пояснение: Подготавливаем Android-плагин для сетевой библиотеки и UI-Kit.
+}

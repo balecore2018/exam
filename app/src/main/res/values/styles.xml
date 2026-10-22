@@ -1,0 +1,9 @@
+<resources> <!-- Пояснение: Начинаем набор визуальных ресурсов приложения. -->
+    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar"> <!-- Пояснение: Создаём светлую тему без стандартной панели заголовка. -->
+        <item name="android:colorAccent">#1554CC</item> <!-- Пояснение: Задаём синий цвет акцентных элементов. -->
+        <item name="android:windowLightStatusBar">true</item> <!-- Пояснение: Делаем значки системной строки тёмными на светлом фоне. -->
+        <item name="android:statusBarColor">#F8F7FF</item> <!-- Пояснение: Задаём лавандовый цвет строки состояния. -->
+        <item name="android:navigationBarColor">#FFFFFF</item> <!-- Пояснение: Делаем нижнюю системную панель белой. -->
+        <item name="android:windowBackground">#F8F7FF</item> <!-- Пояснение: Устанавливаем фон окна до отрисовки экрана. -->
+    </style> <!-- Пояснение: Завершаем определение основной темы. -->
+</resources> <!-- Пояснение: Завершаем файл ресурсов стилей. -->

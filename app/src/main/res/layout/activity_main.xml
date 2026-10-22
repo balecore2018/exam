@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Пояснение: Корневой контейнер располагает заголовок, поиск, список и меню вертикально. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF8F7FC">
+
+    <!-- Пояснение: Заголовок страницы списка вакансий. -->
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Vacancies"
+        android:textColor="#FF172033"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Пояснение: Вертикальная группа содержит поле ввода и кнопку поиска. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="8dp">
+
+        <!-- Пояснение: Поле для ввода названия вакансии. -->
+        <EditText
+            android:id="@+id/searchInput"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/search_input_background"
+            android:hint="⌕  Search by title..."
+            android:inputType="text"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <!-- Пояснение: Кнопка поиска из UI-Kit, её текст и размеры редактируются в Designer. -->
+        <ru.hrconnect.uikit.components.primarybutton.PrimaryButton
+            android:id="@+id/searchButton"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:text="Search" />
+    </LinearLayout>
+
+    <!-- Пояснение: Здесь отображается число найденных вакансий или сообщение о загрузке. -->
+    <TextView
+        android:id="@+id/resultStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="8dp"
+        android:text="Loading vacancies..."
+        android:textColor="#FF6F7C94"
+        android:textSize="12sp" />
+
+    <!-- Пояснение: Прокручиваемая область позволяет просмотреть все вакансии. -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <!-- Пояснение: Java добавляет сюда карточки VacancyCard из ответа сервера или базы. -->
+        <LinearLayout
+            android:id="@+id/vacancyList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="12dp" />
+    </ScrollView>
+
+    <!-- Пояснение: Контейнер внизу страницы для отдельного NavigationFragment. -->
+    <FrameLayout
+        android:id="@+id/navigationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="#FFFFFFFF" />
+</LinearLayout>

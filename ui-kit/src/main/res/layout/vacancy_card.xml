@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Пояснение: Отдельный XML-макет карточки, доступный в UI-Kit Android Studio Designer. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="12dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/vacancy_card_background"
+    android:elevation="2dp">
+
+    <!-- Пояснение: Верхняя часть карточки с инициалами и данными вакансии. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Пояснение: Круглая плашка с инициалами вакансии. -->
+        <TextView
+            android:id="@+id/vacancyBadge"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/vacancy_badge_background"
+            android:gravity="center"
+            android:text="SP"
+            android:textColor="#FF004CD2"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- Пояснение: Колонка названия, команды, формата и зарплаты. -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="10dp">
+
+            <!-- Пояснение: Название вакансии в верхней строке карточки. -->
+            <TextView
+                android:id="@+id/vacancyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Senior Product Designer"
+                android:textColor="#FF1F2738"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Пояснение: Команда и режим работы с небольшими значками. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Пояснение: Название команды или отдела. -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="▦ "
+                    android:textColor="#FF6F7C94"
+                    android:textSize="10sp" />
+
+                <!-- Пояснение: Поле команды заполняется данными вакансии. -->
+                <TextView
+                    android:id="@+id/vacancyTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Product Team"
+                    android:textColor="#FF6F7C94"
+                    android:textSize="10sp" />
+
+                <!-- Пояснение: Значок часов перед форматом работы. -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:text="◷ "
+                    android:textColor="#FF6F7C94"
+                    android:textSize="10sp" />
+
+                <!-- Пояснение: Поле формата работы заполняется серверными данными. -->
+                <TextView
+                    android:id="@+id/vacancyFormat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Full-time"
+                    android:textColor="#FF6F7C94"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <!-- Пояснение: Зарплатный диапазон под командой и форматом. -->
+            <TextView
+                android:id="@+id/vacancySalary"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:gravity="center_vertical"
+                android:text="▣ $120k - $160k"
+                android:textColor="#FF1F2738"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Пояснение: Горизонтальная линия разделяет данные вакансии и число откликов. -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp"
+        android:background="#FFE7E9EF" />
+
+    <!-- Пояснение: Нижняя строка показывает число откликов и стрелку из референса. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Пояснение: Вертикальная группа числа откликов и подписи APPLICANTS. -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Пояснение: Число откликов заполняется данными вакансии. -->
+            <TextView
+                android:id="@+id/vacancyApplicants"
+                android:layout_width="42dp"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:text="24"
+                android:textColor="#FF004CD2"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <!-- Пояснение: Подпись счётчика откликов. -->
+            <TextView
+                android:layout_width="58dp"
+                android:layout_height="13dp"
+                android:gravity="center"
+                android:text="APPLICANTS"
+                android:textColor="#FF6F7C94"
+                android:textSize="8sp" />
+        </LinearLayout>
+
+        <!-- Пояснение: Стрелка повторяет изображение, но не делает карточку нажимаемой. -->
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="›"
+            android:textColor="#FF6F7C94"
+            android:textSize="27sp" />
+    </LinearLayout>
+</LinearLayout>

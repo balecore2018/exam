@@ -1,0 +1,15 @@
+plugins { id 'com.android.library' } // Пояснение: Собираем UI-Kit как отдельную Android-библиотеку.
+
+android { // Пояснение: Настраиваем модуль графических компонентов.
+    namespace 'ru.hrconnect.uikit' // Пояснение: Задаём пространство имён ресурсов UI-Kit.
+    compileSdk 36 // Пояснение: Используем Android SDK 36 при сборке.
+    defaultConfig { minSdk 23 } // Пояснение: Поддерживаем минимальную версию приложения.
+    compileOptions { // Пояснение: Настраиваем версию Java для компонентов UI-Kit.
+        sourceCompatibility JavaVersion.VERSION_17 // Пояснение: Компилируем компоненты с правилами Java 17.
+        targetCompatibility JavaVersion.VERSION_17 // Пояснение: Создаём Java 17 байткод для библиотеки.
+    } // Пояснение: Завершаем настройки компилятора.
+} // Пояснение: Завершаем настройки Android-модуля.
+
+dependencies { // Пояснение: Объявляем необходимую библиотеке модель вакансии.
+    implementation project(':network-layer') // Пояснение: Позволяем карточке UI принимать объект Vacancy.
+} // Пояснение: Завершаем зависимости UI-Kit.
